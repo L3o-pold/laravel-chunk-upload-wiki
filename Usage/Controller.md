@@ -151,7 +151,7 @@ Full example found in `UploadController.php`.
 Required only if not using `move` function on the chunk file.
 
 ### Saving to cloud
-You need to use cloud? Read more [here](https://github.com/pionl/laravel-chunk-upload/wiki/fSaving-to-Cloud).
+You need to use cloud? Read more [here](https://github.com/pionl/laravel-chunk-upload/wiki/Saving-to-Cloud).
 
 Now you need to [choose your frontend](https://github.com/pionl/laravel-chunk-upload/wiki/frontend).
 

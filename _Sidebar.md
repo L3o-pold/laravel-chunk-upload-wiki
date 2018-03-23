@@ -11,3 +11,4 @@
 - Advanced
 	- [Config](https://github.com/pionl/laravel-chunk-upload/wiki/config)
 	- [Cross domain requests](https://github.com/pionl/laravel-chunk-upload/wiki/Cross-domain-requests)
+	- [Saving to cloud](https://github.com/pionl/laravel-chunk-upload/wiki/Saving-to-Cloud).
