@@ -1,0 +1,3 @@
+To enable cross domains requests you need to use additional package or logic. I'm using [laravel-cors](https://github.com/barryvdh/laravel-cors).
+
+Library automatically supports cross domains requests by detecting which information can be used for generating the file name (`session` in most cases will not be availiable). Automatic detection was brought in `1.1.4` release. Previously you would need to use `browser` naming in [config](https://github.com/pionl/laravel-chunk-upload/wiki/config).
