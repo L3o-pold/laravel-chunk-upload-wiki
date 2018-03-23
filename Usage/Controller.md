@@ -159,6 +159,6 @@ Required only if not using `move` function on the chunk file.
 ### Saving to cloud
 You need to use cloud? Read more [here](https://github.com/pionl/laravel-chunk-upload/wiki/Saving-to-Cloud).
 
-Now you need to [choose your frontend](https://github.com/pionl/laravel-chunk-upload/wiki/frontend).
+Now you need to [choose a route](https://github.com/pionl/laravel-chunk-upload/wiki/routing).
 
 

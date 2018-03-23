@@ -18,4 +18,4 @@ Route::post('upload-advanced', 'UploadController@upload');
 
 ```
 
-[Continue with choosing your front end library implementation](https://github.com/pionl/laravel-chunk-upload/wiki/usage).
+Now you need to [choose your frontend](https://github.com/pionl/laravel-chunk-upload/wiki/frontend).

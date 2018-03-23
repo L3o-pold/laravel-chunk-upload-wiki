@@ -1,11 +1,10 @@
-How to use can be found in [Readme.md](https://github.com/pionl/laravel-chunk-upload/#usage)
+## Unique naming
+By default we use session to generate unique name for the chunk file (support same file upload at same time). For this to work, the front end library must send a cookie.
 
-## Index
+You can update the `chunk.name.use` settings for custom usage.
 
-| name | Wiki |
-|---- |----|
-| Controller | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/usage/controller) |
-| [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload) | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/usage/blueimp-file-upload) |
-| [Plupload](https://github.com/moxiecode/plupload) | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/usage/plupload) | 
-| [resumable.js](https://github.com/23/resumable.js) | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/usage/blueimp-file-upload) | 
-| [DropZone](https://gitlab.com/meno/dropzone/) | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/usage/dropzone) | 
+
+    "use" => [
+        "session" => false, // should the chunk name use the session id? The uploader muset send cookie!,
+        "browser" => true // instead of session we can use the ip and browser?
+    ]
