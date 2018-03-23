@@ -3,7 +3,7 @@ There are 2 options how to create a controller:
 1. Using [depedency injection](#depedency-injection) (the easiest way)
 2. [Custom initialization](#custom-initialization) - passing `$request` with file index.
 
-In the example we are using method `saveFile` which saves the file in final destination. More about saving [here](#saving).
+In the example we are using method `saveFile` which moves chunk file to final destination. More about saving [here](#saving).
 
 ## Depedency injection
 
@@ -48,7 +48,13 @@ public function uploadFile(FileReceiver $receiver)
 
 ## Custom initialization
 
-You are using `FileReceiver` class that accepts the `UploadedFile` object or file index (that is used to retreiving file from `$request`), the current `$request` and a class with front end implementation (like `ContentRangeUploadHandler::class` or detect which implementation to use using `HandlerFactory::classFromRequest($request)`).
+You are using `FileReceiver` class that accepts:
+
+1. the `UploadedFile` object or file index (used for retreiving file from `$request`)
+2. current `$request` 
+3. class with front end implementation 
+	* Automatic detection: `HandlerFactory::classFromRequest($request)`.
+	* Forced implementation (exaple): `ContentRangeUploadHandler::class`
 
 ```php
 /**
@@ -94,7 +100,7 @@ public function upload(Request $request) {
 
 ## Saving
 
-In the example we are moving final file (all chunks merged into single file) to desired destination (files are added to directories based on the mime type), thanks to move function the chunk is removed. 
+In the example we are moving final file (all chunks merged into single file) to desired destination (directory built from the files mime type). Thanks to move function the chunk is removed. 
 
 You are free to change this implementation. If you are not planing to use a move function, then you are responsible for deleting the chunk file.
 
