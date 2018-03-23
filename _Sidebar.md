@@ -6,11 +6,11 @@
 - Frontend
 	- [jQuery-File-Upload](https://github.com/pionl/laravel-chunk-upload/wiki/blueimp-file-upload)
 	- [Plupload](https://github.com/pionl/laravel-chunk-upload/wiki/plupload)
-	- [resumable.js](https://github.com/pionl/laravel-chunk-upload/wiki/blueimp-file-upload)
+	- [resumable.js](https://github.com/pionl/laravel-chunk-upload/wiki/jquery-file-upload)
 	- [DropZone](https://github.com/pionl/laravel-chunk-upload/wiki/dropzone)
 - Advanced
 	- [Config](https://github.com/pionl/laravel-chunk-upload/wiki/config)
 	- [Cross domain requests](https://github.com/pionl/laravel-chunk-upload/wiki/Cross-domain-requests)
-	- [Saving to cloud](https://github.com/pionl/laravel-chunk-upload/wiki/Saving-to-Cloud).
+	- [Saving to cloud](https://github.com/pionl/laravel-chunk-upload/wiki/Saving-to-Cloud)
 	- [Providers/Handlers](https://github.com/pionl/laravel-chunk-upload/wiki/More)
 	- [Cleaning old chunks](https://github.com/pionl/laravel-chunk-upload/wiki/command)

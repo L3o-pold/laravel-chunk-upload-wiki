@@ -12,11 +12,7 @@
 
 Using [react-plupload](https://github.com/lemonCMS/react-plupload)
 
-```javascript/jsx
-import Plupload from 'react-plupload'
-
-...
-
+```javascript
 <Plupload
     id="file-upload"
     runtimes="html5,flash"
