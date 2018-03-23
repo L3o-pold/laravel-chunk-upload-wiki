@@ -1,6 +1,6 @@
-| Package | View | Javascript |
-| ---- | ------- | --- |
-| [Website](http://www.dropzonejs.com) | [Source](https://github.com/pionl/laravel-chunk-upload-example/blob/master/resources/views/example/dropzone.blade.php) | [Source](https://github.com/pionl/laravel-chunk-upload-example/blob/master/resources/assets/js/dropzone.js) |
+| Package | View | Javascript | handler class|
+| ---- | ------- | --- | --- |
+| [Website](http://www.dropzonejs.com) | [Source](https://github.com/pionl/laravel-chunk-upload-example/blob/master/resources/views/example/dropzone.blade.php) | [Source](https://github.com/pionl/laravel-chunk-upload-example/blob/master/resources/assets/js/dropzone.js) | DropZoneUploadHandler |
 
 1. Read the official docs
 2. Create the view as package requires 

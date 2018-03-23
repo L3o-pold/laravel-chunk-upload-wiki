@@ -13,7 +13,11 @@ is present in the request, it will create the save object.
 If the file in the request is chunk, it will create the `ChunkSave` object, otherwise creates the `SingleSave`
 which does nothing at this moment.
 
-# AbstractHandler
+# Handlers
+
+Objects that will handle parsing request data for chunk detection for every provider.
+
+## AbstractHandler
 
 Use `AbstractHandler` for type hint or use a specific handler to se additional methods.
 
@@ -44,7 +48,7 @@ Use `AbstractHandler` for type hint or use a specific handler to se additional m
 
 See the `Contribution` section in Readme
 
-# Automatic handler - `HandlerFactory`
+# Automatic handler (HandlerFactory)
 
 You can use the automatic detection of the correct handler (provider) by using the `HandlerFactory::classFromRequest` as
 a third parameter when constructing the `FileReceiver`.
@@ -57,6 +61,7 @@ $receiver = new FileReceiver("file", $request, HandlerFactory::classFromRequest(
 The default fallback class is stored in the HandlerFactory (default `SingleUploadHandler::class`). 
 
 You can change it globally by calling 
+
 ```php
 HandlerFactory::setFallbackHandler(CustomHandler::class)
 ```     

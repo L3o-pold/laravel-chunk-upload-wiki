@@ -1,24 +1,34 @@
-| Package | View | Javascript |
-| ---- | ------- | --- |
-| [Website](http://www.dropzonejs.com) | [Source](https://github.com/pionl/laravel-chunk-upload-example/blob/master/resources/views/example/dropzone.blade.php) | [Source](https://github.com/pionl/laravel-chunk-upload-example/blob/master/resources/assets/js/dropzone.js) |
+| Package | View | Javascript | handler class|
+| ---- | ------- | --- | --- |
+| [Github](https://github.com/moxiecode/plupload) | no example | no example | ChunksInRequestUploadHandler  |
 
 1. Read the official docs
 2. Create the view as package requires 
-3. Implement the basic dropzone code
+3. Implement the basic plupload code (similar to dropuone or jquery upload)
 
+**Do you have an example code? Share with us**
 
-```javascript
-// A quick way setup
-var myDropzone = new Dropzone("#my-awesome-dropzone", {
-    // Setup chunking
-    chunking: true,
-    method: "POST",
-    maxFilesize: 400000000,
-    chunkSize: 1000000
-});
+## React implementation
 
-// Append token to the request - required for web routes
-myDropzone.on('sending', function (file, xhr, formData) {
-    formData.append("_token", token);
-})
+Using [react-plupload](https://github.com/lemonCMS/react-plupload)
+
+```javascript/jsx
+import Plupload from 'react-plupload'
+
+...
+
+<Plupload
+    id="file-upload"
+    runtimes="html5,flash"
+    multipart
+    chunk_size="2mb"
+    url={process.env.APP_API + '/upload'}
+    flash_swf_url="/vendor/plupload-2.1.8//Moxie.swf"
+    multi_selection={false}
+    buttonSelect="Choose file"
+    buttonUpload="Upload"
+    autoUpload
+    onFileUploaded={this.uploadFinished}
+    onBeforeUpload={this.uploadStart}
+/>
 ```

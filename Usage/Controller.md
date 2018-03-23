@@ -54,7 +54,7 @@ You are using `FileReceiver` class that accepts:
 2. current `$request` 
 3. class with front end implementation 
 	* Automatic detection: `HandlerFactory::classFromRequest($request)`.
-	* Forced implementation (exaple): `ContentRangeUploadHandler::class`
+	* Forced implementation (example): `ContentRangeUploadHandler::class`, list of [handlers](https://github.com/pionl/laravel-chunk-upload/wiki/More#abstracthandler)
 
 ```php
 /**
