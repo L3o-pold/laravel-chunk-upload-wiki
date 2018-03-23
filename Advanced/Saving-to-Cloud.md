@@ -48,18 +48,16 @@ public function uploadFile(FileReceiver $receiver)
 
 ## Custom initialization
 
-You are using `FileReceiver` class that accepts the `UploadedFile` object or file index (that is used to retreiving file from `$request`), the current `$request` and a class with front end implementation (like `ContentRangeUploadHandler::class` or detect which implementation to use using `HandlerFactory::classFromRequest($request)`).
-
 ```php
 /**
- * Handles the file upload
- *
- * @param Request $request
- *
- * @return \Illuminate\Http\JsonResponse
- *
- * @throws UploadMissingFileException
- * @throws \Pion\Laravel\ChunkUpload\Exceptions\UploadFailedException
+     * Handles the file upload
+     *
+     * @param Request $request
+     *
+     * @return \Illuminate\Http\JsonResponse
+     *
+     * @throws UploadMissingFileException
+     * @throws \Pion\Laravel\ChunkUpload\Exceptions\UploadFailedException
  */
 public function upload(Request $request) {
     // create the file receiver
@@ -94,65 +92,6 @@ public function upload(Request $request) {
 
 ## Saving
 
-In the example we are moving final file (all chunks merged into single file) to desired destination (files are added to directories based on the mime type), thanks to move function the chunk is removed. 
-
-You are free to change this implementation. If you are not planing to use a move function, then you are responsible for deleting the chunk file.
-
-```php
-/**
- * Saves the file
- *
- * @param UploadedFile $file
- *
- * @return \Illuminate\Http\JsonResponse
- */
-protected function saveFile(UploadedFile $file)
-{
-    $fileName = $this->createFilename($file);
-    // Group files by mime type
-    $mime = str_replace('/', '-', $file->getMimeType());
-    // Group files by the date (week
-    $dateFolder = date("Y-m-W");
-
-    // Build the file path
-    $filePath = "upload/{$mime}/{$dateFolder}/";
-    $finalPath = storage_path("app/".$filePath);
-
-    // move the file name
-    $file->move($finalPath, $fileName);
-
-    return response()->json([
-        'path' => $filePath,
-        'name' => $fileName,
-        'mime_type' => $mime
-    ]);
-}
-
-/**
- * Create unique filename for uploaded file
- * @param UploadedFile $file
- * @return string
- */
-protected function createFilename(UploadedFile $file)
-{
-    $extension = $file->getClientOriginalExtension();
-    $filename = str_replace(".".$extension, "", $file->getClientOriginalName()); // Filename without extension
-
-    // Add timestamp hash to name of the file
-    $filename .= "_" . md5(time()) . "." . $extension;
-
-    return $filename;
-}
-```
-
-Full example found in `UploadController.php`.
-
-### Deleting chunk
-Required only if not using `move` function on the chunk file.
-
-### Saving to cloud
-You need to use cloud? Read more [here](https://github.com/pionl/laravel-chunk-upload/wiki/fSaving-to-Cloud).
-
-Now you need to [choose your frontend](https://github.com/pionl/laravel-chunk-upload/wiki/frontend).
+You need saving the
 
 
