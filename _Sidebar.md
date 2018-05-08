@@ -4,9 +4,9 @@
 	- [Choosing route](https://github.com/pionl/laravel-chunk-upload/wiki/routing)
 	- [Choosing front end library](https://github.com/pionl/laravel-chunk-upload/wiki/frontend)
 - Frontend
-	- [jQuery-File-Upload](https://github.com/pionl/laravel-chunk-upload/wiki/blueimp-file-upload)
+	- [jQuery-File-Upload](https://github.com/pionl/laravel-chunk-upload/wiki/jquery-file-upload)
 	- [Plupload](https://github.com/pionl/laravel-chunk-upload/wiki/plupload)
-	- [resumable.js](https://github.com/pionl/laravel-chunk-upload/wiki/jquery-file-upload)
+	- [resumable.js](https://github.com/pionl/laravel-chunk-upload/wiki/resumable-js)
 	- [DropZone](https://github.com/pionl/laravel-chunk-upload/wiki/dropzone)
 - Advanced
 	- [Config](https://github.com/pionl/laravel-chunk-upload/wiki/config)
