@@ -8,6 +8,7 @@
 	- [Plupload](https://github.com/pionl/laravel-chunk-upload/wiki/plupload)
 	- [resumable.js](https://github.com/pionl/laravel-chunk-upload/wiki/resumable-js)
 	- [DropZone](https://github.com/pionl/laravel-chunk-upload/wiki/dropzone)
+	- [ng-file-upload](https://github.com/pionl/laravel-chunk-upload/wiki/ng-file-upload)
 - Advanced
 	- [Config](https://github.com/pionl/laravel-chunk-upload/wiki/config)
 	- [Cross domain requests](https://github.com/pionl/laravel-chunk-upload/wiki/Cross-domain-requests)
